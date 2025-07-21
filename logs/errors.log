@@ -1,0 +1,6 @@
+2025-07-18 06:35:11 | ERROR    | context_demo                   | test_logging_system :184  | Error message for testing
+2025-07-18 06:46:13 | ERROR    | AIServiceOrchestrator          | set_provider        :172  | Provider gemini not available
+2025-07-18 06:52:19 | ERROR    | AIServiceOrchestrator          | set_provider        :172  | Provider gemini not available
+2025-07-18 06:52:20 | ERROR    | __main__                       | initialize_services :101  | Failed to validate connection to openai
+2025-07-18 06:59:53 | ERROR    | __main__                       | initialize_services :127  | Failed to validate connection to gemini
+2025-07-18 07:07:03 | ERROR    | __main__                       | initialize_services :127  | Failed to validate connection to gemini

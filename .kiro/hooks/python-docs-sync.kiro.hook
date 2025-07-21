@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "name": "Python Documentation Sync",
+  "description": "Monitors all Python source files and configuration files for changes and triggers documentation updates in README.md or docs folder",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.py",
+      "config/*.py",
+      "utils/*.py",
+      "services/*.py",
+      "ui/*.py",
+      "demos/*.py",
+      "requirements.txt",
+      "pyproject.toml",
+      ".env.example"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Python source files have been modified. Please review the changes and update the documentation accordingly. Update the README.md file or create/update documentation in a docs folder if one exists. Focus on:\n\n1. API changes or new functions/classes\n2. Configuration changes\n3. New dependencies or requirements\n4. Usage examples that may need updating\n5. Installation or setup instructions\n\nMake sure the documentation accurately reflects the current state of the codebase and is helpful for users and developers."
+  }
+}

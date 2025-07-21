@@ -1,0 +1,75 @@
+# =============================================================================
+# Context Engineering Demo - Dependencies
+# =============================================================================
+
+# Core Application Framework
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data Generation
+faker>=19.0.0  # Required for Context Service realistic data generation
+
+# =============================================================================
+# AI Provider Dependencies
+# =============================================================================
+
+# OpenAI
+openai>=1.0.0
+
+# Anthropic Claude
+anthropic>=0.7.0
+
+# Google Gemini
+google-generativeai>=0.3.0
+
+# OpenRouter (multi-provider API)
+# Uses requests for HTTP calls
+requests>=2.31.0
+
+# =============================================================================
+# Configuration and Environment Management
+# =============================================================================
+
+# Environment variable loading
+python-dotenv>=1.0.0
+
+# Configuration validation and settings
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# =============================================================================
+# Performance and Caching
+# =============================================================================
+
+# Response caching for improved performance
+# Note: streamlit-cache is deprecated, using built-in st.cache_data instead
+
+# =============================================================================
+# Error Handling and Logging
+# =============================================================================
+
+# Enhanced logging capabilities
+structlog>=23.0.0  # Structured logging for better debugging
+
+# =============================================================================
+# Testing Dependencies
+# =============================================================================
+
+# Core testing framework
+pytest>=7.0.0
+pytest-mock>=3.10.0
+pytest-asyncio>=0.21.0  # For testing async AI provider calls
+pytest-cov>=4.0.0  # Code coverage reporting
+
+# HTTP mocking for AI provider testing
+responses>=0.23.0
+
+# =============================================================================
+# Development Dependencies (optional)
+# =============================================================================
+
+# Code formatting and linting (uncomment for development)
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
