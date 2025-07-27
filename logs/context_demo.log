@@ -348,3 +348,6 @@
 2025-07-27 17:56:09 | INFO     | context_demo                   | setup_logging       :174  | Logging initialized with level: INFO
 2025-07-27 17:56:09 | INFO     | context_demo                   | setup_logging       :176  | Log files will be written to: /Users/gyanendra/CascadeProjects/Context-Engineer-Demo/logs
 2025-07-27 17:56:09 | INFO     | __main__                       | __init__            :175  | AIResponseGenerator initialized: AI enabled=True, Provider=AIProvider.GEMINI
+2025-07-27 18:11:01 | INFO     | context_demo                   | setup_logging       :174  | Logging initialized with level: INFO
+2025-07-27 18:11:01 | INFO     | context_demo                   | setup_logging       :176  | Log files will be written to: /Users/gyanendra/CascadeProjects/Context-Engineer-Demo/logs
+2025-07-27 18:11:01 | INFO     | __main__                       | __init__            :175  | AIResponseGenerator initialized: AI enabled=True, Provider=AIProvider.GEMINI
