@@ -321,3 +321,30 @@
 2025-07-19 19:38:26 | INFO     | context_demo                   | setup_logging       :174  | Logging initialized with level: INFO
 2025-07-19 19:38:26 | INFO     | context_demo                   | setup_logging       :176  | Log files will be written to: /Users/gyanendra/CascadeProjects/Context-Engineer-Demo/logs
 2025-07-19 19:38:26 | INFO     | __main__                       | __init__            :175  | AIResponseGenerator initialized: AI enabled=True, Provider=AIProvider.GEMINI
+2025-07-27 17:55:27 | INFO     | context_demo                   | setup_logging       :174  | Logging initialized with level: INFO
+2025-07-27 17:55:27 | INFO     | context_demo                   | setup_logging       :176  | Log files will be written to: /Users/gyanendra/CascadeProjects/Context-Engineer-Demo/logs
+2025-07-27 17:55:27 | INFO     | __main__                       | load_app_configuration:70   | Loaded application settings: Context Engineering Demo
+2025-07-27 17:55:27 | INFO     | __main__                       | initialize_services :91   | ✅ Context service initialized
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | _initialize_providers:100  | Initializing AI providers...
+2025-07-27 17:55:27 | INFO     | context_demo.error_recovery    | register_provider   :72   | Registered provider openai for error recovery
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | _initialize_providers:124  | ✅ Initialized openai provider
+2025-07-27 17:55:27 | INFO     | context_demo.error_recovery    | register_provider   :72   | Registered provider anthropic for error recovery
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | _initialize_providers:124  | ✅ Initialized anthropic provider
+2025-07-27 17:55:27 | INFO     | context_demo.error_recovery    | register_provider   :72   | Registered provider gemini for error recovery
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | _initialize_providers:124  | ✅ Initialized gemini provider
+2025-07-27 17:55:27 | INFO     | context_demo.error_recovery    | register_provider   :72   | Registered provider openrouter for error recovery
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | _initialize_providers:124  | ✅ Initialized openrouter provider
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | _initialize_providers:132  | Initialized 4 AI providers: [<AIProvider.OPENAI: 'openai'>, <AIProvider.ANTHROPIC: 'anthropic'>, <AIProvider.GEMINI: 'gemini'>, <AIProvider.OPENROUTER: 'openrouter'>]
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | set_provider        :176  | Set current provider to gemini
+2025-07-27 17:55:27 | INFO     | AIServiceOrchestrator          | set_provider        :176  | Set current provider to gemini
+2025-07-27 17:55:29 | INFO     | __main__                       | initialize_services :125  | ✅ AI provider gemini connected successfully
+2025-07-27 17:55:29 | INFO     | __main__                       | __init__            :175  | AIResponseGenerator initialized: AI enabled=True, Provider=AIProvider.GEMINI
+2025-07-27 17:55:29 | INFO     | __main__                       | validate_configuration:46   | Starting configuration validation...
+2025-07-27 17:55:29 | INFO     | config.validation              | setup_logging       :256  | Logging configured with level: INFO
+2025-07-27 17:55:29 | INFO     | __main__                       | validate_configuration:50   | Configuration validation passed
+2025-07-27 17:55:52 | INFO     | context_demo                   | setup_logging       :174  | Logging initialized with level: INFO
+2025-07-27 17:55:52 | INFO     | context_demo                   | setup_logging       :176  | Log files will be written to: /Users/gyanendra/CascadeProjects/Context-Engineer-Demo/logs
+2025-07-27 17:55:52 | INFO     | __main__                       | __init__            :175  | AIResponseGenerator initialized: AI enabled=True, Provider=AIProvider.GEMINI
+2025-07-27 17:56:09 | INFO     | context_demo                   | setup_logging       :174  | Logging initialized with level: INFO
+2025-07-27 17:56:09 | INFO     | context_demo                   | setup_logging       :176  | Log files will be written to: /Users/gyanendra/CascadeProjects/Context-Engineer-Demo/logs
+2025-07-27 17:56:09 | INFO     | __main__                       | __init__            :175  | AIResponseGenerator initialized: AI enabled=True, Provider=AIProvider.GEMINI
