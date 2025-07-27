@@ -7,6 +7,7 @@ import os
 import sys
 import subprocess
 import argparse
+import streamlit as st
 
 def run_static_demo():
     """Run the static version (app.py)"""
@@ -24,26 +25,44 @@ def run_static_demo():
     except FileNotFoundError:
         print("❌ Streamlit not found. Install with: pip install streamlit")
 
+def get_secret(key):
+    import streamlit as st
+    import os
+    provider_map = {
+        "OPENAI_API_KEY": ("ai_providers", "openai", "api_key"),
+        "ANTHROPIC_API_KEY": ("ai_providers", "anthropic", "api_key"),
+        "GEMINI_API_KEY": ("ai_providers", "gemini", "api_key"),
+        "OPENROUTER_API_KEY": ("ai_providers", "openrouter", "api_key"),
+    }
+    if key in provider_map:
+        try:
+            return st.secrets[provider_map[key][0]][provider_map[key][1]][provider_map[key][2]]
+        except Exception:
+            pass
+    # Fallback to flat secret or environment variable
+    return st.secrets.get(key) or os.getenv(key)
+
+
 def run_ai_demo():
     """Run the AI-powered version (main.py)"""
     print("🤖 Starting AI-Powered Context Engineering Demo...")
     
     # Check for available API keys
     api_keys_found = []
-    if os.getenv('OPENAI_API_KEY'):
+    if get_secret('OPENAI_API_KEY'):
         api_keys_found.append("OpenAI")
-    if os.getenv('ANTHROPIC_API_KEY'):
+    if get_secret('ANTHROPIC_API_KEY'):
         api_keys_found.append("Anthropic")
-    if os.getenv('GEMINI_API_KEY'):
+    if get_secret('GEMINI_API_KEY'):
         api_keys_found.append("Gemini")
-    if os.getenv('OPENROUTER_API_KEY'):
+    if get_secret('OPENROUTER_API_KEY'):
         api_keys_found.append("OpenRouter")
     
     if api_keys_found:
         print(f"✅ AI providers found: {', '.join(api_keys_found)} - Real AI responses enabled")
     else:
         print("⚠️  No AI provider API keys found - Will use fallback mode")
-        print("   Set one of these environment variables for full AI experience:")
+        print("   Set one of these environment variables or add to Streamlit secrets for full AI experience:")
         print("   - OPENAI_API_KEY for OpenAI GPT models")
         print("   - ANTHROPIC_API_KEY for Claude models")
         print("   - GEMINI_API_KEY for Google Gemini")
